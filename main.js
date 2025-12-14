@@ -117,9 +117,9 @@ export function getEmployeeStatistics(employees) {
   const averageAge = roundTo1(sum(ages) / total);
 
   // minAge / maxAge / medianAge sa majú zaokrúhliť na celé číslo
-  const minAge = Math.round(Math.min(...ages));
-  const maxAge = Math.round(Math.max(...ages));
-  const medianAge = Math.round(median(ages));
+  const minAge = Math.floor(Math.min(...ages));
+  const maxAge = Math.floor(Math.max(...ages));
+  const medianAge = Math.floor(median(ages));
 
   // medianWorkload je celé číslo
   const medianWorkload = Math.round(median(workloads));
